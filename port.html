@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nagendra | Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="portfolio-container">
+
+        <!-- Navigation -->
+        <ul class="navlist">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#projects" onclick="showProjects()">Work</a></li>
+            <li><a href="#about" onclick="showInfo()">About</a></li>
+            <li><a href="#projects" onclick="showProjects()">Project</a></li>
+            <li><a href="#contact" onclick="showInfo()">Contact</a></li>
+        </ul>
+
+        <!-- Left Section -->
+        <div class="left-container" id="home">
+
+            <!-- Social Media Icons -->
+            <div class="icon">
+
+                <a href="https://www.linkedin.com/in/nagendra-sendhav/"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+
+                <a href="https://www.instagram.com/kahna_thakur_/"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="https://x.com/YOUR-USERNAME"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="X">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+
+                <a href="https://wa.me/6269889229"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="WhatsApp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+
+            </div>
+
+            <!-- Introduction -->
+            <div class="content">
+
+                <p class="intro">
+                    Hi! I am <span>Nagendra Sendhav</span>
+                </p>
+
+                <h1>Web Developer</h1>
+
+                <p class="description">
+                    I am an aspiring Web Developer passionate about
+                    creating attractive, user-friendly websites that
+                    solve real-world problems. I enjoy learning new
+                    technologies and building creative, practical
+                    projects. My goal is to improve my skills, gain
+                    hands-on experience, and become a successful
+                    Full Stack Developer.
+                </p>
+
+                <div class="buttons">
+                    <button class="but" onclick="showInfo()">
+                        Hire Me
+                    </button>
+
+                    <button class="nut" onclick="showProjects()">
+                        View Project
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Right Section -->
+        <div class="right-container"></div>
+
+        <!-- Profile Image Design -->
+        <div class="design">
+            <div class="circle">
+                <div class="profile-image"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Hire Me / About Popup -->
+    <div id="myInfo" class="popup">
+
+        <button class="close-btn" onclick="hideInfo()"
+                aria-label="Close">&times;</button>
+
+        <h2>My Information</h2>
+
+        <p><strong>Name:</strong> Nagendra Sendhav</p>
+        <p><strong>Role:</strong> Web Developer </p>
+        <p><strong>Learning:</strong> C++ and DSA  Web Devlopment</p>
+        <p><strong>Skills:</strong> HTML, CSS, C++, python</p>
+        <p><strong>Goal:</strong> Full Stack Developer Real world problam solver</p>
+
+        <p>
+            <strong>Email:</strong>
+            <a href="mailto:YOUR-EMAIL@example.com">
+                nagendrathakurkahnathakur@gmail.com
+            </a>
+        </p>
+
+        <a class="popup-link"
+           href="https://www.linkedin.com/in/nagendra-sendhav/"
+           target="_blank" rel="noopener noreferrer">
+            Visit My LinkedIn
+        </a>
+
+    </div>
+
+    <!-- View Project Popup -->
+    <div id="projectSection" class="popup project-popup">
+
+        <button class="close-btn" onclick="hideProjects()"
+                aria-label="Close">&times;</button>
+
+        <h2>I am currently learning DSA.; Projects</h2>
+
+        <p class="project-intro">
+            My journey of learning programming and solving
+            real-world problems.
+        </p>
+
+        <div class="project-card">
+            <h3>01. Learning DSA in C++</h3>
+            <p>
+                Practicing Data Structures and Algorithms using C++,
+                including arrays, vectors, searching and sorting.
+            </p>
+            <span>C++ | DSA | Problem Solving</span>
+        </div>
+
+        <div class="project-card">
+            <h3>02. Personal Portfolio</h3>
+            <p>
+                Creating a personal portfolio website to showcase
+                my skills, introduction and learning journey.
+            </p>
+            <span>HTML | CSS | Web Development</span>
+        </div>
+
+        <div class="project-card">
+            <h3>03. More Projects Coming Soon</h3>
+            <p>
+                I am continuously learning and building new projects.
+            </p>
+        </div>
+
+        <a class="popup-link"
+           href="https://github.com/"
+           target="_blank" rel="noopener noreferrer">
+            Visit GitHub
+        </a>
+
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        function showInfo() {
+            document.getElementById("myInfo").style.display = "block";
+        }
+
+        function hideInfo() {
+            document.getElementById("myInfo").style.display = "none";
+        }
+
+        function showProjects() {
+            document.getElementById("projectSection").style.display = "block";
+        }
+
+        function hideProjects() {
+            document.getElementById("projectSection").style.display = "none";
+        }
+
+        // Close popups with the Escape key
+        document.addEventListener("keydown", function(event) {
+            if (event.key === "Escape") {
+                hideInfo();
+                hideProjects();
+            }
+        });
+    </script>
+
+</body>
+</html>
+
